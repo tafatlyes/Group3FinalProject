@@ -19,7 +19,7 @@
 
     <modules>
         <module>generic</module>
-        <module>tdbank</module>
+        <module>JustFab</module>
     </modules>
 
     <dependencyManagement>
