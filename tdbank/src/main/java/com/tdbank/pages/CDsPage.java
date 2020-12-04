@@ -1,11 +1,14 @@
 package com.tdbank.pages;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import pnt.automation.base.TestBase;
 import pnt.automation.extent.ExtentTestManager;
+
+import java.util.Iterator;
 
 public class CDsPage extends TestBase {
 
@@ -26,6 +29,8 @@ public class CDsPage extends TestBase {
         select.selectByVisibleText("New York");
         ExtentTestManager.log("New York State is selected !!!");
         Assert.assertTrue(selectACityTab.isDisplayed());
+
+
     }
 
     public void selectAlbanyCity() {

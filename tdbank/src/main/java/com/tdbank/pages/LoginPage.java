@@ -44,18 +44,21 @@ public class LoginPage extends TestBase {
 
     public void clickOnProductsButton() {
         products.click();
+        sleepFor(3);
         Assert.assertEquals(driver.getCurrentUrl(), "https://onlinebanking.tdbank.com/#/settings/productServices");
     }
 
 
     public void clickOnForgetUserNameOrPassword() {
         forgetUserNameOrPassword.click();
+        sleepFor(3);
         Assert.assertEquals(driver.getTitle(), "Log In Help");
     }
 
 
     public void clickOnSignUpForOnlineBanking() {
         signUpForOnlineBanking.click();
+        sleepFor(3);
         Assert.assertEquals(driver.getCurrentUrl(), "https://onlinebanking.tdbank.com/#/authentication/login/enrollment/signup/selectprofile");
     }
 
