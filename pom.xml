@@ -19,7 +19,9 @@
 
     <modules>
         <module>generic</module>
+
         <module>wayfair</module>
+        <module>amazon</module>
     </modules>
 
     <dependencyManagement>
