@@ -1,7 +1,6 @@
 package com.JustFab.pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -30,7 +29,7 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//a[@data-ga-label='handbags-accessories-main']")
     private WebElement accessories;
 
-    @FindBy(xpath ="(//a[@rel='external'])[8]")
+    @FindBy(xpath = "(//a[@rel='external'])[8]")
     private WebElement sneakershop;
 
     @FindBy(xpath = "//label[@for='remember_me']")
@@ -57,38 +56,45 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//*[@id='question_text_1764']")
     private WebElement stylequiz;
 
-    public void clickSneakerShop(){
+    public void clickSneakerShop() {
         sneakershop.click();
         Assert.assertTrue(sneakers.isDisplayed());
     }
-    public void clickAccessoriesButton(){
+
+    public void clickAccessoriesButton() {
         accessories.click();
         Assert.assertTrue(allbags.isDisplayed());
     }
+
     public void clickOnSignInButton() {
         signInButton.click();
         sleepFor(5);
         Assert.assertTrue(memberlogin.isDisplayed());
     }
+
     public void typeInSearchBar() {
         searchBar.sendKeys("booties");
         Assert.assertTrue(element.isDisplayed());
     }
-    public void mouseHoverNewArrivals(){
+
+    public void mouseHoverNewArrivals() {
         Actions actions = new Actions(driver);
         actions.moveToElement(newArrivalsButton).build().perform();
         Assert.assertTrue(clothing.isDisplayed());
     }
-    public void mouseHoverBootShop(){
+
+    public void mouseHoverBootShop() {
         Actions actions = new Actions(driver);
         actions.moveToElement(bootShop).build().perform();
         Assert.assertTrue(booties.isDisplayed());
     }
-    public void clickOnFreeReturnsAndExchangesButton(){
+
+    public void clickOnFreeReturnsAndExchangesButton() {
         freeReturnsAndExchangesButton.click();
         Assert.assertTrue(skipquiz.isDisplayed());
     }
-    public void clickOnTakeStyleQuiz(){
+
+    public void clickOnTakeStyleQuiz() {
         takeStyleQuizButton.click();
         Assert.assertTrue(stylequiz.isDisplayed());
     }

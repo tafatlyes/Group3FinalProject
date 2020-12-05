@@ -18,8 +18,9 @@ public class JewelryPageValidation extends TestBase {
         accessoriesPage.clickJewelryButton();
         jewelryPage.clickJewelryStyleButton();
     }
+
     @Test
-    public void validateUserCanClickBraceletCheckBox(){
+    public void validateUserCanClickBraceletCheckBox() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         AccessoriesPage accessoriesPage = PageFactory.initElements(driver, AccessoriesPage.class);
         JewelryPage jewelryPage = PageFactory.initElements(driver, JewelryPage.class);
@@ -28,8 +29,9 @@ public class JewelryPageValidation extends TestBase {
         jewelryPage.clickJewelryStyleButton();
         jewelryPage.clickBraceletCheckBox();
     }
+
     @Test
-    public void validateUserCanClickEarringsCheckBox(){
+    public void validateUserCanClickEarringsCheckBox() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         AccessoriesPage accessoriesPage = PageFactory.initElements(driver, AccessoriesPage.class);
         JewelryPage jewelryPage = PageFactory.initElements(driver, JewelryPage.class);
@@ -38,6 +40,7 @@ public class JewelryPageValidation extends TestBase {
         jewelryPage.clickJewelryStyleButton();
         jewelryPage.clickEarringsCheckBox();
     }
+
     @Test
     public void validateUserCanClickPriceLowToHighButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);

@@ -1,7 +1,6 @@
 package com.JustFab.pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pnt.automation.base.TestBase;
@@ -54,10 +53,11 @@ public class LoginPage extends TestBase {
     @FindBy(xpath = "//a[@class='skipquiz-link']")
     private WebElement skipquiz;
 
-    public void clickSignUpButton(){
+    public void clickSignUpButton() {
         signUp.click();
         Assert.assertTrue(skipquiz.isDisplayed());
     }
+
     public void clickOnSignInButton() {
         signInButton.click();
         Assert.assertTrue(element.isDisplayed());
@@ -90,7 +90,7 @@ public class LoginPage extends TestBase {
     Assert.assertTrue(checkedbox.isDisplayed());
     }*/
 
-    public void clickFacebookLogIn(){
+    public void clickFacebookLogIn() {
         facebookLogIn.click();
         Set<String> handler = driver.getWindowHandles();
         Iterator<String> it = handler.iterator();

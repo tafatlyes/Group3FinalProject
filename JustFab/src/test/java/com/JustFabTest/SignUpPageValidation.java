@@ -10,7 +10,7 @@ import pnt.automation.base.TestBase;
 public class SignUpPageValidation extends TestBase {
 
     @Test
-    public void validateUserCanClickShoeSize(){
+    public void validateUserCanClickShoeSize() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);
@@ -19,8 +19,9 @@ public class SignUpPageValidation extends TestBase {
         signUpPage.clickSkipQuiz();
         signUpPage.clickShoeSize();
     }
+
     @Test
-    public void validateUserCanTypeInFirstName(){
+    public void validateUserCanTypeInFirstName() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);
@@ -30,8 +31,9 @@ public class SignUpPageValidation extends TestBase {
         signUpPage.typeInFirstName();
 
     }
+
     @Test
-    public void validateUserCanTypeInEmail(){
+    public void validateUserCanTypeInEmail() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);
@@ -40,8 +42,9 @@ public class SignUpPageValidation extends TestBase {
         signUpPage.clickSkipQuiz();
         signUpPage.typeInEmail();
     }
+
     @Test
-    public void validateUserCanSignUp(){
+    public void validateUserCanSignUp() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);
@@ -55,6 +58,7 @@ public class SignUpPageValidation extends TestBase {
         signUpPage.clickShoeSize();
         signUpPage.clickComplete();
     }
+
     @Test
     public void validateUserCanClickShoeOne() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -64,8 +68,9 @@ public class SignUpPageValidation extends TestBase {
         loginPage.clickSignUpButton();
         signUpPage.clickShoeOne();
     }
+
     @Test
-    public void validateUserCanClickOutfitOne(){
+    public void validateUserCanClickOutfitOne() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);
@@ -76,8 +81,9 @@ public class SignUpPageValidation extends TestBase {
         signUpPage.clickShoeThree();
         signUpPage.clickOutfitOne();
     }
+
     @Test
-    public void validateUserCanClickShoeThree(){
+    public void validateUserCanClickShoeThree() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);
@@ -88,8 +94,9 @@ public class SignUpPageValidation extends TestBase {
         signUpPage.clickShoeThree();
 
     }
+
     @Test
-    public void validateUserCanClickShoeTwo(){
+    public void validateUserCanClickShoeTwo() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         SignUpPage signUpPage = PageFactory.initElements(driver, SignUpPage.class);

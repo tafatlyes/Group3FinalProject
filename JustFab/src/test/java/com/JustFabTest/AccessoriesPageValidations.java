@@ -16,8 +16,9 @@ public class AccessoriesPageValidations extends TestBase {
         accessoriesPage.clickBagsButton();
         sleepFor(5);
     }
+
     @Test
-    public void validateUserCanClickBestSellersButton(){
+    public void validateUserCanClickBestSellersButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         AccessoriesPage accessoriesPage = PageFactory.initElements(driver, AccessoriesPage.class);
         homePage.clickAccessoriesButton();
@@ -25,8 +26,9 @@ public class AccessoriesPageValidations extends TestBase {
         accessoriesPage.clickBestSellersButton();
         sleepFor(5);
     }
+
     @Test
-    public void validateUserCanClickTopRatedButton(){
+    public void validateUserCanClickTopRatedButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         AccessoriesPage accessoriesPage = PageFactory.initElements(driver, AccessoriesPage.class);
         homePage.clickAccessoriesButton();
@@ -34,8 +36,9 @@ public class AccessoriesPageValidations extends TestBase {
         accessoriesPage.clickTopRatedButton();
         sleepFor(5);
     }
+
     @Test
-    public void validateUserCanClickJewelryButton(){
+    public void validateUserCanClickJewelryButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         AccessoriesPage accessoriesPage = PageFactory.initElements(driver, AccessoriesPage.class);
         homePage.clickAccessoriesButton();

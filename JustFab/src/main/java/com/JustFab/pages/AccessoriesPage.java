@@ -1,7 +1,6 @@
 package com.JustFab.pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pnt.automation.base.TestBase;
@@ -32,24 +31,24 @@ public class AccessoriesPage extends TestBase {
     @FindBy(xpath = "//li[@class='filter-set-heading'][1]")
     private WebElement jewelryStyle;
 
-    public void clickJewelryButton(){
+    public void clickJewelryButton() {
         jewelryButton.click();
         Assert.assertTrue(jewelryStyle.isDisplayed());
     }
 
-    public void clickTopRatedButton(){
+    public void clickTopRatedButton() {
         topRatedButton.click();
         Assert.assertTrue(aryTote.isDisplayed());
     }
 
-    public void clickBestSellersButton(){
+    public void clickBestSellersButton() {
         bestSellersButton.click();
         Assert.assertTrue(newArrivals.isDisplayed());
     }
 
 
-public void clickBagsButton(){
-    bagsButton.click();
-    Assert.assertTrue(bagsStyle.isDisplayed());
-}
+    public void clickBagsButton() {
+        bagsButton.click();
+        Assert.assertTrue(bagsStyle.isDisplayed());
+    }
 }

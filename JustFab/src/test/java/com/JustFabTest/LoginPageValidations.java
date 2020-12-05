@@ -2,10 +2,6 @@ package com.JustFabTest;
 
 import com.JustFab.pages.HomePage;
 import com.JustFab.pages.LoginPage;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import pnt.automation.base.TestBase;
@@ -19,14 +15,16 @@ public class LoginPageValidations extends TestBase {
         homePage.clickOnSignInButton();
         sleepFor(5);
     }
+
     @Test
-    public void validateUserCanTypeInEmail(){
+    public void validateUserCanTypeInEmail() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnSignInButton();
         sleepFor(5);
         loginPage.typeInEmail();
     }
+
     @Test
     public void validateUserCanTypeInPassword() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -35,23 +33,26 @@ public class LoginPageValidations extends TestBase {
         sleepFor(5);
         loginPage.typeInPassword();
     }
+
     @Test
-    public void validateUserCanClickOnKeepMeLoggedIn(){
+    public void validateUserCanClickOnKeepMeLoggedIn() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnSignInButton();
         sleepFor(3);
         loginPage.clickOnKeepMeLoggedIn();
     }
+
     @Test
-    public void validateUserCanClickSignUpButton(){
+    public void validateUserCanClickSignUpButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         homePage.clickOnSignInButton();
         loginPage.clickSignUpButton();
     }
+
     @Test
-    public void validateUserCanClickFacebookLogIn(){
+    public void validateUserCanClickFacebookLogIn() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnSignInButton();

@@ -1,7 +1,6 @@
 package com.JustFab.pages;
 
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pnt.automation.base.TestBase;
@@ -32,19 +31,22 @@ public class JewelryPage extends TestBase {
     @FindBy(xpath = "//div[@id='latest']")
     private WebElement lowhigh;
 
-    public void clickPriceLowToHighButton(){
+    public void clickPriceLowToHighButton() {
         priceLowToHighButton.click();
         Assert.assertTrue(lowhigh.isDisplayed());
     }
-    public void clickEarringsCheckBox(){
+
+    public void clickEarringsCheckBox() {
         earringsCheckBox.click();
         Assert.assertTrue(earrings.isDisplayed());
     }
-    public void clickBraceletCheckBox(){
+
+    public void clickBraceletCheckBox() {
         braceletCheckBox.click();
         Assert.assertTrue(bracelet.isDisplayed());
     }
-    public void clickJewelryStyleButton(){
+
+    public void clickJewelryStyleButton() {
         jewelryStyleButton.click();
         Assert.assertTrue(body.isDisplayed());
     }

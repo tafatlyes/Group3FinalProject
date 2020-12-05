@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pnt.automation.base.TestBase;
 
-import javax.swing.*;
-
 public class SignUpPage extends TestBase {
 
     @FindBy(xpath = "//input[@name='firstname']")
@@ -51,52 +49,63 @@ public class SignUpPage extends TestBase {
     @FindBy(xpath = "//span[@class='welcome-text']")
     private WebElement welcomeText;
 
-    public void clickComplete(){
+    public void clickComplete() {
         complete.click();
         Assert.assertTrue(welcomeText.isDisplayed());
     }
-    public void typeInPostCode(){
+
+    public void typeInPostCode() {
         postcode.sendKeys("11727");
     }
-    public void clickShoeSize(){
+
+    public void clickShoeSize() {
         size8.click();
         sleepFor(5);
         Assert.assertTrue(size8clicked.isDisplayed());
     }
-    public void typePassword(){
+
+    public void typePassword() {
         password.sendKeys("SashaDoll");
     }
-    public void clickOutfitTwo(){
+
+    public void clickOutfitTwo() {
         outfitTwo.click();
     }
-    public void clickOutfitOne(){
+
+    public void clickOutfitOne() {
         outfitOne.click();
         sleepFor(5);
         Assert.assertTrue(outfitTwo.isDisplayed());
     }
-    public void clickShoeThree(){
+
+    public void clickShoeThree() {
         shoeThree.click();
         sleepFor(5);
         Assert.assertTrue(outfitOne.isDisplayed());
     }
-    public void clickShoeTwo(){
+
+    public void clickShoeTwo() {
         shoeTwo.click();
         sleepFor(5);
         Assert.assertTrue(shoeThree.isDisplayed());
     }
-    public void clickShoeOne(){
+
+    public void clickShoeOne() {
         shoeOne.click();
         sleepFor(5);
         Assert.assertTrue(shoeTwo.isDisplayed());
     }
-    public void typeInEmail(){
+
+    public void typeInEmail() {
         email.sendKeys("sasha@sleepC.com");
     }
-    public void clickSkipQuiz(){
+
+    public void clickSkipQuiz() {
         skipquiz.click();
         Assert.assertTrue(firstName.isDisplayed());
     }
-    public void typeInFirstName(){
+
+    public void typeInFirstName() {
         firstName.sendKeys("Sasha");
 
     }
