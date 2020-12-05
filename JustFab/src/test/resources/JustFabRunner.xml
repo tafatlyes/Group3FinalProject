@@ -23,6 +23,7 @@
             <class name="com.JustFabTest.LoginPageValidations"/>
             <class name="com.JustFabTest.AccessoriesPageValidations"/>
             <class name="com.JustFabTest.JewelryPageValidation"></class>
+            <class name="com.JustFabTest.SignUpPageValidation"></class>
         </classes>
     </test>
 </suite>

@@ -6,6 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import pnt.automation.base.TestBase;
 
+import java.util.Iterator;
+import java.util.Set;
+
 
 public class LoginPage extends TestBase {
 
@@ -30,28 +33,49 @@ public class LoginPage extends TestBase {
     @FindBy(xpath = "//div[@id='fb_link_login']")
     private WebElement facebookLogIn;
 
+    @FindBy(xpath = "//input[@id='reference_data']")
+    private WebElement emails;
+
+    @FindBy(xpath = "//a[@class=' login_modal_trigger']")
+    private WebElement element;
+
+    @FindBy(xpath = "//input[@id='email']")
+    private WebElement emailTab;
+
+    @FindBy(xpath = "//input[@type='password'][1]")
+    private WebElement passwords;
+
+    @FindBy(xpath = "//label[@for='remember_me']")
+    private WebElement checkbox;
+
+    @FindBy(xpath = "//a[@class='pink']")
+    private WebElement signUp;
+
+    @FindBy(xpath = "//a[@class='skipquiz-link']")
+    private WebElement skipquiz;
+
+    public void clickSignUpButton(){
+        signUp.click();
+        Assert.assertTrue(skipquiz.isDisplayed());
+    }
     public void clickOnSignInButton() {
         signInButton.click();
-        WebElement element = driver.findElement(By.xpath("//a[@class=' login_modal_trigger']"));
         Assert.assertTrue(element.isDisplayed());
 
     }
 
     public void typeInEmail() {
         email.sendKeys("ludaschick87@hotmail.com");
-        WebElement emails = driver.findElement(By.xpath("//input[@id='reference_data']"));
         Assert.assertTrue(emails.isDisplayed());
     }
 
     public void typeInPassword() {
         password.sendKeys("1kidclavil");
-        WebElement passwords = driver.findElement(By.xpath("//input[@type='password'][1]"));
         Assert.assertTrue(passwords.isDisplayed());
     }
 
     public void clickOnKeepMeLoggedIn() {
         keepMeLoggedIn.click();
-        WebElement checkbox = driver.findElement(By.xpath("//label[@for='remember_me']"));
         Assert.assertTrue(checkbox.isDisplayed());
     }
 
@@ -68,9 +92,14 @@ public class LoginPage extends TestBase {
 
     public void clickFacebookLogIn(){
         facebookLogIn.click();
-        //WebElement fblogin = driver.findElement(By.xpath("//input[@name='login']"));
-        //sleepFor(3);
-        //Assert.assertTrue(fblogin.isDisplayed());
+        Set<String> handler = driver.getWindowHandles();
+        Iterator<String> it = handler.iterator();
+        String parentWindow = it.next();
+        String childWindow = it.next();
+        driver.switchTo().window(childWindow);
+        sleepFor(2);
+        sleepFor(3);
+        Assert.assertTrue(emailTab.isDisplayed());
 
     }
 

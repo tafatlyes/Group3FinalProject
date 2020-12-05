@@ -20,28 +20,36 @@ public class AccessoriesPage extends TestBase {
     @FindBy(xpath = "//a[@data-ga-label='Jewelry']")
     private WebElement jewelryButton;
 
+    @FindBy(xpath = "//li[@class='filter-set-heading'][1]")
+    private WebElement bagsStyle;
+
+    @FindBy(xpath = "//div[@id='latest']")
+    private WebElement newArrivals;
+
+    @FindBy(xpath = "//img[@style='opacity: 1;'][1]")
+    private WebElement aryTote;
+
+    @FindBy(xpath = "//li[@class='filter-set-heading'][1]")
+    private WebElement jewelryStyle;
+
     public void clickJewelryButton(){
         jewelryButton.click();
-        WebElement jewelryStyle = driver.findElement(By.xpath("//li[@class='filter-set-heading'][1]"));
         Assert.assertTrue(jewelryStyle.isDisplayed());
     }
 
     public void clickTopRatedButton(){
         topRatedButton.click();
-        WebElement aryTote = driver.findElement(By.xpath("//img[@style='opacity: 1;'][1]"));
         Assert.assertTrue(aryTote.isDisplayed());
     }
 
     public void clickBestSellersButton(){
         bestSellersButton.click();
-        WebElement newArrivals = driver.findElement(By.xpath("//div[@id='latest']"));
         Assert.assertTrue(newArrivals.isDisplayed());
     }
 
 
 public void clickBagsButton(){
     bagsButton.click();
-    WebElement bagsStyle = driver.findElement(By.xpath("//li[@class='filter-set-heading'][1]"));
     Assert.assertTrue(bagsStyle.isDisplayed());
 }
 }

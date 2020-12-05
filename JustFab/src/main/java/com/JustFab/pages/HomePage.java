@@ -30,42 +30,66 @@ public class HomePage extends TestBase {
     @FindBy(xpath = "//a[@data-ga-label='handbags-accessories-main']")
     private WebElement accessories;
 
+    @FindBy(xpath ="(//a[@rel='external'])[8]")
+    private WebElement sneakershop;
+
+    @FindBy(xpath = "//label[@for='remember_me']")
+    private WebElement sneakers;
+
+    @FindBy(xpath = "//a[@data-ga-label='All Bags & Accessories']")
+    private WebElement allbags;
+
+    @FindBy(xpath = "//div[@class='title']")
+    private WebElement memberlogin;
+
+    @FindBy(xpath = "//*[@id='search-input']/input")
+    private WebElement element;
+
+    @FindBy(xpath = "//a[@data-ga-label='bootshop-booties']")
+    private WebElement booties;
+
+    @FindBy(xpath = "//a[@data-ga-label='newarrivals-clothing']")
+    private WebElement clothing;
+
+    @FindBy(xpath = "//a[@class='skipquiz-link']")
+    private WebElement skipquiz;
+
+    @FindBy(xpath = "//*[@id='question_text_1764']")
+    private WebElement stylequiz;
+
+    public void clickSneakerShop(){
+        sneakershop.click();
+        Assert.assertTrue(sneakers.isDisplayed());
+    }
     public void clickAccessoriesButton(){
         accessories.click();
-        WebElement allbags = driver.findElement(By.xpath("//a[@data-ga-label='All Bags & Accessories']"));
         Assert.assertTrue(allbags.isDisplayed());
     }
     public void clickOnSignInButton() {
         signInButton.click();
         sleepFor(5);
-        WebElement memberlogin = driver.findElement(By.xpath("//div[@class='title']"));
         Assert.assertTrue(memberlogin.isDisplayed());
     }
     public void typeInSearchBar() {
         searchBar.sendKeys("booties");
-        WebElement element = driver.findElement(By.xpath("//*[@id=\"search-input\"]/input"));
         Assert.assertTrue(element.isDisplayed());
     }
     public void mouseHoverNewArrivals(){
         Actions actions = new Actions(driver);
         actions.moveToElement(newArrivalsButton).build().perform();
-        WebElement element = driver.findElement(By.xpath("//*[@id=\"logged-in-header-nav\"]/ul/li[1]/ul/div[1]/li[1]/ul/div/li[2]/a"));
-        Assert.assertTrue(element.isDisplayed());
+        Assert.assertTrue(clothing.isDisplayed());
     }
     public void mouseHoverBootShop(){
         Actions actions = new Actions(driver);
         actions.moveToElement(bootShop).build().perform();
-        WebElement booties = driver.findElement(By.xpath("//*[@id=\"logged-in-header-nav\"]/ul/li[3]/ul/div[1]/li[1]/ul/div/li[1]/a"));
         Assert.assertTrue(booties.isDisplayed());
     }
     public void clickOnFreeReturnsAndExchangesButton(){
         freeReturnsAndExchangesButton.click();
-        WebElement element = driver.findElement(By.xpath("//a[@class='skipquiz-link']"));
-        Assert.assertTrue(element.isDisplayed());
+        Assert.assertTrue(skipquiz.isDisplayed());
     }
     public void clickOnTakeStyleQuiz(){
         takeStyleQuizButton.click();
-        WebElement stylequiz = driver.findElement(By.xpath("//*[@id=\"question_text_1764\"]"));
         Assert.assertTrue(stylequiz.isDisplayed());
     }
 }

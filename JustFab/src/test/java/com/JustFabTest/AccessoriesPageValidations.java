@@ -8,7 +8,7 @@ import pnt.automation.base.TestBase;
 
 public class AccessoriesPageValidations extends TestBase {
 
-    @Test(enabled = false)
+    @Test
     public void validateUserCanClickBagsButton() {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickAccessoriesButton();
@@ -16,7 +16,7 @@ public class AccessoriesPageValidations extends TestBase {
         accessoriesPage.clickBagsButton();
         sleepFor(5);
     }
-    @Test(enabled = false)
+    @Test
     public void validateUserCanClickBestSellersButton(){
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         AccessoriesPage accessoriesPage = PageFactory.initElements(driver, AccessoriesPage.class);
@@ -25,7 +25,7 @@ public class AccessoriesPageValidations extends TestBase {
         accessoriesPage.clickBestSellersButton();
         sleepFor(5);
     }
-    @Test(enabled = false)
+    @Test
     public void validateUserCanClickTopRatedButton(){
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         AccessoriesPage accessoriesPage = PageFactory.initElements(driver, AccessoriesPage.class);
@@ -34,7 +34,7 @@ public class AccessoriesPageValidations extends TestBase {
         accessoriesPage.clickTopRatedButton();
         sleepFor(5);
     }
-    @Test(enabled = false)
+    @Test
     public void validateUserCanClickJewelryButton(){
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         AccessoriesPage accessoriesPage = PageFactory.initElements(driver, AccessoriesPage.class);

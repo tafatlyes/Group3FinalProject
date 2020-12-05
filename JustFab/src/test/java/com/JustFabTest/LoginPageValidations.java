@@ -5,6 +5,7 @@ import com.JustFab.pages.LoginPage;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import pnt.automation.base.TestBase;
@@ -18,7 +19,7 @@ public class LoginPageValidations extends TestBase {
         homePage.clickOnSignInButton();
         sleepFor(5);
     }
-    @Test(enabled = false)
+    @Test
     public void validateUserCanTypeInEmail(){
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -26,7 +27,7 @@ public class LoginPageValidations extends TestBase {
         sleepFor(5);
         loginPage.typeInEmail();
     }
-    @Test(enabled = false)
+    @Test
     public void validateUserCanTypeInPassword() {
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
@@ -41,6 +42,21 @@ public class LoginPageValidations extends TestBase {
         homePage.clickOnSignInButton();
         sleepFor(3);
         loginPage.clickOnKeepMeLoggedIn();
+    }
+    @Test
+    public void validateUserCanClickSignUpButton(){
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+        homePage.clickOnSignInButton();
+        loginPage.clickSignUpButton();
+    }
+    @Test
+    public void validateUserCanClickFacebookLogIn(){
+        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
+        homePage.clickOnSignInButton();
+        loginPage.clickFacebookLogIn();
+        sleepFor(5);
 
     }
    /* @Test(enabled = false)
@@ -50,24 +66,16 @@ public class LoginPageValidations extends TestBase {
         homePage.clickOnSignInButton();
         loginPage.clickIAmNotARobot();
     }
-    @Test(enabled = false)
+    @Test
     public void validateUserCanClickLogInButton(){
         LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
         homePage.clickOnSignInButton();
-        sleepFor(30);
+        sleepFor(50);
         loginPage.typeInEmail();
         loginPage.typeInPassword();
         loginPage.clickLogIn();
     }*/
-    @Test(enabled = false)//fix later
-    public void validateUserCanClickFacebookLogIn(){
-        LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
-        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.clickOnSignInButton();
-        loginPage.clickFacebookLogIn();
-        sleepFor(5);
 
-    }
 
 }
