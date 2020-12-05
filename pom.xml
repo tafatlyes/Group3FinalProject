@@ -19,7 +19,8 @@
 
     <modules>
         <module>generic</module>
-
+       <module>tdbank</module>
+        <module>JustFab</module>
         <module>wayfair</module>
         <module>amazon</module>
     </modules>
