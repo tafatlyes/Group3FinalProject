@@ -20,13 +20,13 @@
         <classes>
 
             <class name="com.tdbanktest.HomePageValidations"/>
-            <class name="com.tdbanktest.LoginPageValidations"/>
-            <class name="com.tdbanktest.SmallBusinessPageValidations"/>
-            <class name="com.tdbanktest.CommercialPageValidations"/>
-            <class name="com.tdbanktest.InvestingAndWealthPageValidations"/>
-            <class name="com.tdbanktest.MortgagePageValidations"/>
-            <class name="com.tdbanktest.CDsPageValidations"/>
+            <!-- <class name="com.tdbanktest.LoginPageValidations"/>
+             <class name="com.tdbanktest.SmallBusinessPageValidations"/>
+             <class name="com.tdbanktest.CommercialPageValidations"/>
+             <class name="com.tdbanktest.InvestingAndWealthPageValidations"/>
+             <class name="com.tdbanktest.MortgagePageValidations"/>
+             <class name="com.tdbanktest.CDsPageValidations"/>-->
 
-        </classes>
-    </test>
-</suite>
+         </classes>
+     </test>
+ </suite>
