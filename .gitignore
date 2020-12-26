@@ -14,7 +14,7 @@
 
 ### Maven template
 log/
-target/
+JustFab/target/
 test-output/
 screenshots
 Extent-Report
